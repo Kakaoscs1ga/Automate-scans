@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Function to display usage information
+usage() {
+    echo "Usage: $0 -h <input_file> -output <output_directory>"
+    echo "Example: $0 -h ip_addresses.txt -output scan_results"
+    exit 1
+
 # Check if Nikto is installed
 command -v nikto >/dev/null 2>&1 || { echo >&2 "Nikto is not installed. Please install it before running this script."; exit 1; }
 
